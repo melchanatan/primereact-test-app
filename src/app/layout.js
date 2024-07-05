@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import {
   PrimeReactProvider,
@@ -8,9 +8,9 @@ import {
 
 import Tailwind from "primereact/passthrough/tailwind";
 import "primereact/resources/primereact.min.css";
-import "primereact/resources/themes/lara-light-blue/theme.css";
+import "primereact/resources/themes/lara-light-teal/theme.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <PrimeReactProvider value={value}>
-        <body className={inter.className}>{children}</body>
+        <body className={montserrat.className}>{children}</body>
       </PrimeReactProvider>
     </html>
   );
