@@ -1,11 +1,26 @@
-import Image from "next/image";
-import Navbar from "@/components/Navbar";
-import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
+"use client";
+import React, { useRef } from "react";
+import { Button } from "primereact/button";
+import { Toast } from "primereact/toast";
+import ItemCard from "@/components/ItemCard";
 
 export default function Home() {
+  const toast = useRef(null);
+
+  const show = () => {
+    toast.current.show({
+      severity: "success",
+      summary: "Info",
+      detail: "Message Content",
+    });
+  };
+
   return (
-    <main className="flex min-h-screen flex-col">
-      <Navbar />
-    </main>
+    <>
+      <Toast ref={toast} />
+      <main className="grid grid-cols-4 items-start justify-start px-5">
+        <ItemCard showToast={show} />
+      </main>
+    </>
   );
 }

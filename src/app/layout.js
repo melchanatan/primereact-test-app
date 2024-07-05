@@ -5,10 +5,10 @@ import {
   PrimeReactContext,
   PrimeReact,
 } from "primereact/api";
-
 import Tailwind from "primereact/passthrough/tailwind";
 import "primereact/resources/primereact.min.css";
-import "primereact/resources/themes/lara-light-teal/theme.css";
+import "primereact/resources/themes/tailwind-light/theme.css";
+import Navbar from "@/components/Navbar";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -25,7 +25,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <PrimeReactProvider value={value}>
-        <body className={montserrat.className}>{children}</body>
+        <body className={montserrat.className}>
+          <Navbar />
+          {children}
+        </body>
       </PrimeReactProvider>
     </html>
   );
