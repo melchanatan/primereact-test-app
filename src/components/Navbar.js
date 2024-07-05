@@ -24,7 +24,13 @@ const Navbar = () => {
     </div>
   );
 
-  return <Menubar start={start} end={end} className="m-5 px-10" />;
+  return (
+    <Menubar
+      start={start}
+      end={end}
+      className="m-5 px-10 sticky top-3 z-[100]"
+    />
+  );
 };
 
 export default Navbar;

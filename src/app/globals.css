@@ -31,3 +31,11 @@ body {
     text-wrap: balance;
   }
 }
+
+.p-menubar .p-menubar-button {
+  display: none !important;
+}
+
+.p-toast-message-content {
+  @apply !border-x-0;
+}

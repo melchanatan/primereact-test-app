@@ -7,7 +7,7 @@ import {
 } from "primereact/api";
 import Tailwind from "primereact/passthrough/tailwind";
 import "primereact/resources/primereact.min.css";
-import "primereact/resources/themes/tailwind-light/theme.css";
+import "primereact/resources/themes/lara-light-blue/theme.css";
 import Navbar from "@/components/Navbar";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
